@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palanquin&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+@media (max-width: 929px) {
+  body {
+    background: #eff1ff;
+  }
+
+  .left-side {
+    height: 28rem;
+    width: 50rem;
+    background-color: #8e9aaf;
+    text-align: center;
+    position: relative;
+    background-image: url(imagens/logo\ 1.png);
+    background-repeat: no-repeat;
+    background-position: 50% 15%;
+    margin: 0 auto 20rem;
+  }
+
+  .left-side h1 {
+    background-color: #cbc0d3;
+    font-family: 'Staatliches', cursive;
+    color: white;
+    font-weight: 400;
+    line-height: 3.4rem;
+    letter-spacing: 0.05rem;
+    text-shadow: 0 0.2rem 0.2rem rgb(0 0 0 / 25%);
+    position: absolute;
+    top: 22.1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    font-size: 4rem;
+  }
+
+  .left-side p {
+    color: #23053a;
+    font-family: 'Palanquin', sans-serif;
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 1.5rem;
+    max-width: 30.5rem;
+    margin: 3rem 1rem 4rem;
+    display: flex;
+    bottom: 20rem;
+    position: absolute;
+    top: 27rem;
+    left: 8rem;
+
+  }
+
+  .page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 6rem;
+  }
+
+  img {
+    position: relative;
+    width: 40rem;
+    margin: auto;
+    transition-property: all;
+    transition-duration: 500ms;
+    animation: downtop 1s reverse;
+  }
+
+  img:hover {
+    filter: brightness(0.9);
+    transform: scale(1.1);
+  }
+
+  .card {
+    position: relative;
+    font-family: 'Staatliches', cursive;
+    margin-bottom: 4rem;
+  }
+
+  .card p {
+    position: absolute;
+    gap: 2.8rem;
+    top: 2.2rem;
+    right: 2.8rem;
+    animation: topdown 700ms;
+    transition: opacity 1s;
+  }
+
+  .card p span {
+    height: 3.8rem;
+    padding: 0 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 32px;
+    color: #4a4e69;
+    background-color: #feeafa;
+    border-radius: 20px;
+  }
+
+  .card:nth-child(3) {
+    display: none;
+  }
+  .card:nth-child(4) {
+    display: none;
+  }
+
+  @keyframes topdown {
+    0% {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes downtop {
+    100% {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+  }
+}
+
+@media (min-width: 930px) {
+  .page {
+    display: flex;
+  }
+
+  .left-side {
+    width: 27vw;
+    background-image: url(imagens/logo\ 1.png);
+    background-repeat: no-repeat;
+    background-position: 50% 5%;
+    background-color: #8e9aaf;
+    height: 110vh;
+  }
+
+  h1 {
+    background-color: #cbc0d3;
+    font-family: 'Staatliches', cursive;
+    color: white;
+    font-weight: 400;
+    line-height: 3.4rem;
+    letter-spacing: 0.05rem;
+    text-shadow: 0 0.2rem 0.2rem rgb(0 0 0 / 25%);
+    margin-top: 23rem;
+    width: 100%;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem
+  }
+
+  .left-side p {
+    color: white;
+    font-family: 'Palanquin', sans-serif;
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 2rem;
+    padding: 4rem 4rem 0;
+  }
+
+  .right-side {
+    display: grid;
+    grid-template-areas:
+      'A B C'
+      'D B E'
+      'D F E';
+    gap: 3rem;
+    width: 70vw;
+    padding: 5rem 8rem;
+  }
+
+  img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    transition-property: all;
+    transition-duration: 500ms;
+    animation: downtop 1s reverse;
+  }
+
+  img:hover {
+    filter: brightness(0.9);
+    transform: scale(1.1);
+  }
+
+  .card {
+    position: relative;
+    font-family: 'Staatliches', cursive;
+  }
+
+  .card p {
+    opacity: 0;
+    position: absolute;
+    top: 1rem;
+    right: 2.4rem;
+  }
+
+  .card:hover p {
+    opacity: 1;
+    display: block;
+    animation: topdown 700ms;
+    transition: opacity 1s;
+  }
+
+  .card p span {
+    height: 3.8rem;
+    padding: 0 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 32px;
+    color: #4a4e69;
+    background-color: #feeafa;
+    border-radius: 20px;
+  }
+
+  .card img {
+    width: 100%;
+  }
+
+  .card:nth-child(1) {
+    grid-area: A;
+  }
+  .card:nth-child(2) {
+    grid-area: B;
+  }
+  .card:nth-child(3) {
+    grid-area: C;
+  }
+  .card:nth-child(4) {
+    grid-area: D;
+  }
+  .card:nth-child(5) {
+    grid-area: E;
+  }
+  .card:nth-child(6) {
+    grid-area: F;
+  }
+
+  @keyframes topdown {
+    0% {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes downtop {
+    100% {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+  }
+}
